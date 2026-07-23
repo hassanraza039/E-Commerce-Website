@@ -1,0 +1,132 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+/* header section */
+.header_container{
+    width: 100%;
+    height: 100px;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.header_div{
+    width: 185px;
+    height: 41px;
+    display: flex;
+    gap: 5px;
+}
+.header_logo{
+    width: 50px;
+    height: 32px;
+}
+.header_text{
+    font-size: 34px;
+    font-weight: bold;
+}
+.header_ul{
+    width: 430px;
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.header_icon{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+.icons{
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+/* hero_section */
+.hero_container{
+    position: relative;
+    width: 100%;
+    height: 820px;
+}
+.hero_img{
+    width: 100%;
+    height: 780px;
+    object-fit: fill;
+}
+.hero_container2{
+    position: absolute;
+    width: 650px;
+    height: 450px;
+    background-color: #FFF3E3;
+    bottom: 180px;
+    right: 50px;
+}
+.hero_text{
+    width: 560px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+.hero_h3{
+    font-size: 3px;
+    width: 559px;
+    height: 127px;
+}
+.hero_h1{
+    font-size: 52px;
+    font-weight: bold;
+    color: rgb(162, 125, 76);
+}
+.hero_h3{
+    width: 530px;
+    height: 51px;
+    font-size: 18px;
+}
+.hero_button{
+    width: 200px;
+    padding: 10px;
+    background-color: rgba(162, 125, 76,0.3);
+    color: #FFF;
+    font-size: 18px;
+    border: none;
+
+}
+.hero_text2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hero_h2{
+    width: 300px;
+    height: 48px;
+    font-size: 32px;
+    font-weight: bold;
+}
+.hero_p{
+    font-size: 20px;
+}
+/* card_section */
+.card_container{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 40px;
+}
+.card{
+    width: 380px;
+    height: 480px;
+}
+.cards{
+    text-align: center;
+}
+.img_text{
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: lighter;
+}
