@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Commerce Website</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
     <script defer src="./app.js"></script>
 </head>
+
 <body>
     <header>
         <div class="header_container">
-        <div class="header_div">
-            <div class="header_logo">
-                <img src="./images/header_logo.png" alt="logo">
-            </div><!--header_logo-->
-            <h3 class="header_text">FURNIRO</h3><!--header_text-->
-        </div> <!--header_div-->
-        <div class="header_ul">
-            <ul class="header_ul">
-                <li class="header_li">Home</li>
-                <li class="header_li">Shop</li>
-                <li class="header_li">About</li>
-                <li class="header_li">Contact</li>
-            </ul>
-        </div><!--header_ul-->
-        <div class="header_icon">
-            <span><img src="./images/header_contact.png" alt="contact" class="icons"></span>
-            <span><img src="./images/header_heart.png" alt="heart" class="icons"></span>
-            <span><img src="./images/header_search.png" alt="search" class="icons"></span>
-            <span><img src="./images/header_cart.png" alt="cart" class="icons"></span>
-        </div><!--headericon-->
+            <div class="header_div">
+                <div class="header_logo">
+                    <img src="./images/header_logo.png" alt="logo">
+                </div><!--header_logo-->
+                <h3 class="header_text">FURNIRO</h3><!--header_text-->
+            </div> <!--header_div-->
+            <div class="header_ul">
+                <ul class="header_ul">
+                    <li class="header_li">Home</li>
+                    <li class="header_li">Shop</li>
+                    <li class="header_li">About</li>
+                    <li class="header_li">Contact</li>
+                </ul>
+            </div><!--header_ul-->
+            <div class="header_icon">
+                <span><img src="./images/header_contact.png" alt="contact" class="icons"></span>
+                <span><img src="./images/header_heart.png" alt="heart" class="icons"></span>
+                <span><img src="./images/header_search.png" alt="search" class="icons"></span>
+                <span><img src="./images/header_cart.png" alt="cart" class="icons"></span>
+            </div><!--headericon-->
         </div><!--header_container-->
     </header>
     <div class="hero_container">
@@ -38,30 +41,175 @@
         </div>
         <div class="hero_container2">
             <div class="hero_text">
-            <h6 class="hero_h6">New Arrival</h6>
-            <h1 class="hero_h1">Discover Our New Collection</h1>
-            <h3 class="hero_h3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</h3>
-            <button class="hero_button">Buy Now</button>
-        </div><!--hero_text-->
+                <h6 class="hero_h6">New Arrival</h6>
+                <h1 class="hero_h1">Discover Our New Collection</h1>
+                <h3 class="hero_h3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+                    ullamcorper mattis.</h3>
+                <button class="hero_button">Buy Now</button>
+            </div><!--hero_text-->
         </div><!--hero_container2-->
     </div>
     <div class="hero_text2">
-    <h2 class="hero_h2">Browse The Range</h2>
-    <p class="hero_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h2 class="hero_h2">Browse The Range</h2>
+        <p class="hero_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div><!--hero_text2-->
     <div class="card_container">
         <div class="cards">
-            <img src="./images/Mask Group.png" alt=""class="card">
+            <img src="./images/Mask Group.png" alt="" class="cart">
             <div class="img_text">Dining</div>
         </div>
         <div class="cards">
-            <img src="./images/Image-living room.png" alt="" class="card">
+            <img src="./images/Image-living room.png" alt="" class="cart">
             <div class="img_text">Living</div>
         </div>
         <div class="cards">
-            <img src="./images/Image-living room.png" alt="" class="card">
+            <img src="./images/Image-living room.png" alt="" class="cart">
             <div class="img_text">Bedroom</div>
         </div>
     </div>
+    <h2 class="product">Our Products</h2>
+    <div class="product_container" id="products"> </div>
+    <div class="show_more_wrapper">
+        <button class="show_more_btn" id="showMoreBtn">Show More</button>
+    </div>
+    <!-- Room section -->
+    <section class="rooms_section">
+        <div class="rooms_container">
+            <div class="rooms_text">
+                <h1>50+ Beautiful rooms inspiration</h1>
+                <p>Our designer already made a lot of beautiful prototype of rooms that inspire you</p>
+                <button class="explore_btn">Explore More</button>
+            </div>
+            <div class="rooms_slider">
+                <div class="slider_track" id="sliderTrack">
+                    <div class="slide">
+                        <img src="./images/room1.png" alt="Bed Room">
+                        <div class="slide_caption">
+                            <div class="caption_top">
+                                <span class="caption_num">01</span>
+                                <span class="caption_line"></span>
+                                <span class="caption_type">Bed Room</span>
+                            </div>
+                            <div class="caption_bottom">
+                                <h3>Inner Peace</h3>
+                                <button class="arrow_btn">&#8594;</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="./images/room2.png" alt="Dining Room">
+                        <div class="slide_caption">
+                            <div class="caption_top">
+                                <span class="caption_num">02</span>
+                                <span class="caption_line"></span>
+                                <span class="caption_type">Dining Room</span>
+                            </div>
+                            <div class="caption_bottom">
+                                <h3>Family Time</h3>
+                                <button class="arrow_btn">&#8594;</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="./images/P_item3.png" alt="Living Room">
+                        <div class="slide_caption">
+                            <div class="caption_top">
+                                <span class="caption_num">03</span>
+                                <span class="caption_line"></span>
+                                <span class="caption_type">Living Room</span>
+                            </div>
+                            <div class="caption_bottom">
+                                <h3>Cozy Corner</h3>
+                                <button class="arrow_btn">&#8594;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider_next_btn" id="sliderNextBtn">&#8250;</button>
+                <div class="slider_dots" id="sliderDots"></div>
+            </div>
+        </div>
+    </section>
+    <!-- gallery section -->
+<section class="gallery_section">
+    <div class="gallery_heading">
+        <p>Share your setup with</p>
+        <h2>#FuniroFurniture</h2>
+    </div>
+
+    <div class="gallery_grid">
+        <div class="g_item" style="grid-area: shelf;">
+            <img src="./images/g1.png" alt="Shelf">
+        </div>
+        <div class="g_item" style="grid-area: desk;">
+            <img src="./images/g2.png" alt="Desk setup">
+        </div>
+        <div class="g_item" style="grid-area: dining;">
+            <img src="./images/g3.png" alt="Dining room">
+        </div>
+        <div class="g_item" style="grid-area: bedroom;">
+            <img src="./images/g4.png" alt="Bedroom">
+        </div>
+        <div class="g_item" style="grid-area: brick;">
+            <img src="./images/g5.png" alt="Brick wall dining">
+        </div>
+        <div class="g_item" style="grid-area: chair;">
+            <img src="./images/g6.png" alt="Chair">
+        </div>
+        <div class="g_item" style="grid-area: vase;">
+            <img src="./images/g7.png" alt="Vase and stools">
+        </div>
+        <div class="g_item" style="grid-area: frame;">
+            <img src="./images/g8.png" alt="Frame">
+        </div>
+        <div class="g_item" style="grid-area: kitchen;">
+            <img src="./images/g9.png" alt="Kitchen tiles">
+        </div>
+    </div>
+</section>
+<!-- footer -->
+ <footer class="site_footer">
+    <div class="footer_container">
+
+        <div class="footer_col footer_brand">
+            <h2>Funiro.</h2>
+            <p>400 University Drive Suite 200 Coral Gables,<br>FL 33134 USA</p>
+        </div>
+
+        <div class="footer_col">
+            <h4>Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer_col">
+            <h4>Help</h4>
+            <ul>
+                <li><a href="#">Payment Options</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Privacy Policies</a></li>
+            </ul>
+        </div>
+
+        <div class="footer_col footer_newsletter">
+            <h4>Newsletter</h4>
+            <div class="newsletter_input">
+                <input type="email" placeholder="Enter Your Email Address">
+                <button type="submit">SUBSCRIBE</button>
+            </div>
+        </div>
+
+    </div>
+
+    <hr class="footer_divider">
+
+    <div class="footer_bottom">
+        <p>2023 furino. All rights reverved</p>
+    </div>
+</footer>
 </body>
 </html>
