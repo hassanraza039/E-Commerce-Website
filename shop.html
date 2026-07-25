@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./app.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header_container">
+            <div class="header_div">
+                <div class="header_logo">
+                    <img src="./images/header_logo.png" alt="logo">
+                </div><!--header_logo-->
+                <h3 class="header_text">FURNIRO</h3><!--header_text-->
+            </div> <!--header_div-->
+            <div class="header_ul">
+                <ul class="header_ul">
+                    <li class="header_li"><a href="./index.html">Home</a></li>
+                    <li class="header_li"><a href="./shop.html">Shop</a></li>
+                    <li class="header_li">About</li>
+                    <li class="header_li">Contact</li>
+                </ul>
+            </div><!--header_ul-->
+            <div class="header_icon">
+                <span><img src="./images/header_contact.png" alt="contact" class="icons"></span>
+                <span><img src="./images/header_heart.png" alt="heart" class="icons"></span>
+                <span><img src="./images/header_search.png" alt="search" class="icons"></span>
+                <span><img src="./images/header_cart.png" alt="cart" class="icons"></span>
+            </div><!--headericon-->
+        </div><!--header_container-->
+    </header>
+    <!-- Shop Banner Section -->
+ <div class="banner">
+    <div class="overlay"></div>
+
+    <div class="banner-text">
+      <h1 style="color: black;">Shop</h1>
+      <p style="color: black;">
+        <a href="index.html" style="color: black;">Home</a> &gt; <span style="color: black;">Shop</span>
+      </p>
+    </div>
+  </div>
+   <div class="toolbar">
+ 
+    <!-- Left side -->
+    <div class="left-side">
+      <div class="filter">
+        <span class="icon">&#9881;</span>
+        <span>Filter</span>
+      </div>
+      <div class="icon-box">&#9635;&#9635;</div>
+      <div class="icon-box">&#9776;</div>
+      <span class="divider"></span>
+      <div class="results-text">Showing 1–16 of 32 results</div>
+    </div>
+    <!-- Right side -->
+    <div class="right-side">
+      <div class="dropdown-group">
+        <span class="label">Show</span>
+        <select class="dropdown">
+          <option>16</option>
+          <option>24</option>
+          <option>32</option>
+        </select>
+      </div>
+      <div class="dropdown-group">
+        <span class="label">Short by</span>
+        <select class="dropdown white-box">
+          <option>Default</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+          <option>Newest</option>
+        </select>
+      </div>
+    </div>
+  </div>
+     <div class="shop_container" id="shop"> </div>
+     <div class="pagination">
+       <button class="page-btn active">1</button>
+       <button class="page-btn">2</button>
+       <button class="page-btn">3</button>
+       <button class="page-btn next-btn">Next</button>
+     </div>
+     <div class="features">
+
+  <div class="feature-item">
+    <img src="./images/trophy 1.png" alt="High Quality" class="feature-icon">
+    <div class="feature-text">
+      <h4>High Quality</h4>
+      <p>crafted from top materials</p>
+    </div>
+  </div>
+
+  <div class="feature-item">
+    <img src="./images/guarantee.png" alt="Warranty Protection" class="feature-icon">
+    <div class="feature-text">
+      <h4>Warranty Protection</h4>
+      <p>Over 2 years</p>
+    </div>
+  </div>
+
+  <div class="feature-item">
+    <img src="./images/shipping.png" alt="Free Shipping" class="feature-icon">
+    <div class="feature-text">
+      <h4>Free Shipping</h4>
+      <p>Order over 150 $</p>
+    </div>
+  </div>
+
+  <div class="feature-item">
+    <img src="./images/customer-support.png" alt="24/7 Support" class="feature-icon">
+    <div class="feature-text">
+      <h4>24 / 7 Support</h4>
+      <p>Dedicated support</p>
+    </div>
+  </div>
+</div>
+<!-- footer -->
+ <footer class="site_footer">
+    <div class="footer_container">
+
+        <div class="footer_col footer_brand">
+            <h2>Funiro.</h2>
+            <p>400 University Drive Suite 200 Coral Gables,<br>FL 33134 USA</p>
+        </div>
+
+        <div class="footer_col">
+            <h4>Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer_col">
+            <h4>Help</h4>
+            <ul>
+                <li><a href="#">Payment Options</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Privacy Policies</a></li>
+            </ul>
+        </div>
+
+        <div class="footer_col footer_newsletter">
+            <h4>Newsletter</h4>
+            <div class="newsletter_input">
+                <input type="email" placeholder="Enter Your Email Address">
+                <button type="submit">SUBSCRIBE</button>
+            </div>
+        </div>
+
+    </div>
+
+    <hr class="footer_divider">
+
+    <div class="footer_bottom">
+        <p>2023 furino. All rights reverved</p>
+    </div>
+</footer>
+</body>
+</html>
