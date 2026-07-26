@@ -6,6 +6,8 @@
     <title>Product Detail</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+    <script defer src="./cart.js"></script>
+    <script defer src="./search.js"></script>
     <script defer src="./product.js"></script>
 </head>
 <body>
@@ -21,17 +23,21 @@
                 <ul class="header_ul">
                     <li class="header_li"><a href="./index.html">Home</a></li>
                     <li class="header_li"><a href="./shop.html">Shop</a></li>
-                    <li class="header_li">About</li>
-                    <li class="header_li">Contact</li>
+                    <li class="header_li"><a href="./blog.html">Blog</a></li>
+                    <li class="header_li"><a href="./contact.html">Contact</a></li>
                 </ul>
             </div><!--header_ul-->
             <div class="header_icon">
                 <span><img src="./images/header_contact.png" alt="contact" class="icons"></span>
                 <span><img src="./images/header_heart.png" alt="heart" class="icons"></span>
-                <span><img src="./images/header_search.png" alt="search" class="icons"></span>
-                <span><img src="./images/header_cart.png" alt="cart" class="icons"></span>
+                <span id="headerSearchIcon"><img src="./images/header_search.png" alt="search" class="icons"></span>
+                <span id="headerCartIcon"><img src="./images/header_cart.png" alt="cart" class="icons"></span>
             </div><!--headericon-->
         </div><!--header_container-->
+        <div class="header_search_box" id="headerSearchBox">
+            <input type="text" id="headerSearchInput" placeholder="Search products...">
+            <div class="header_search_results" id="headerSearchResults"></div>
+        </div>
     </header>
 
     <!-- Breadcrumb strip -->
@@ -179,8 +185,8 @@
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Shop</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
                 </ul>
             </div>
 
@@ -232,7 +238,7 @@
 
         <div class="cart_action_buttons">
             <button class="cart_action_btn" id="goToCartBtn">Cart</button>
-            <button class="cart_action_btn">Checkout</button>
+            <button class="cart_action_btn" id="goToCheckoutBtn">Checkout</button>
             <button class="cart_action_btn" id="comparisonBtn">Comparison</button>
         </div>
     </div>

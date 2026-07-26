@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Comparison</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
     <script defer src="./cart.js"></script>
     <script defer src="./search.js"></script>
-    <script defer src="./comparison.js"></script>
+    <script defer src="./contact.js"></script>
 </head>
 <body>
     <header>
@@ -40,27 +40,84 @@
         </div>
     </header>
 
-    <!-- Comparison Banner -->
-    <div class="banner comparison_banner">
+    <!-- Contact Banner -->
+    <div class="banner contact_banner">
         <div class="overlay"></div>
         <div class="banner-text">
             <img src="./images/header_logo.png" alt="logo" class="banner_logo_icon">
-            <h1 style="color:black;">Product Comparison</h1>
+            <h1 style="color:black;">Contact</h1>
             <p style="color:black;">
-                <a href="index.html" style="color:black;">Home</a> &gt; <span style="color:black;">Comparison</span>
+                <a href="index.html" style="color:black;">Home</a> &gt; <span style="color:black;">Contact</span>
             </p>
         </div>
     </div>
 
-    <!-- Comparison Section -->
-    <div class="comparison_page">
+    <!-- Get In Touch Section -->
+    <div class="contact_page">
 
-        <div class="comparison_top_row" id="comparisonTopRow">
-            <!-- JS se: "Go to Product page" box + product cards + Add A Product box -->
+        <div class="contact_heading">
+            <h2>Get In Touch With Us</h2>
+            <p>For More Information About Our Product &amp; Services, Please Feel Free To Drop Us<br>
+                an Email. Our Staff Always Be There To Help You Out. Do Not Hesitate!</p>
         </div>
 
-        <div class="comparison_table" id="comparisonTable">
-            <!-- JS se: General specs table -->
+        <div class="contact_content">
+
+            <div class="contact_info_col">
+
+                <div class="contact_info_item">
+                    <i class="fa fa-map-marker contact_icon"></i>
+                    <div>
+                        <h4>Address</h4>
+                        <p>236 5th SE Avenue, New<br>York NY10000, United<br>States</p>
+                    </div>
+                </div>
+
+                <div class="contact_info_item">
+                    <i class="fa fa-phone contact_icon"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>Mobile: +(84) 546-6789<br>Hotline: +(84) 456-6789</p>
+                    </div>
+                </div>
+
+                <div class="contact_info_item">
+                    <i class="fa fa-clock-o contact_icon"></i>
+                    <div>
+                        <h4>Working Time</h4>
+                        <p>Monday-Friday: 9:00 -<br>22:00<br>Saturday-Sunday: 9:00 -<br>21:00</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contact_form_col">
+                <form id="contactForm">
+
+                    <div class="contact_field">
+                        <label>Your name</label>
+                        <input type="text" id="contactName" placeholder="Abc">
+                    </div>
+
+                    <div class="contact_field">
+                        <label>Email address</label>
+                        <input type="email" id="contactEmail" placeholder="Abc@def.com">
+                    </div>
+
+                    <div class="contact_field">
+                        <label>Subject</label>
+                        <input type="text" id="contactSubject" placeholder="This is an optional">
+                    </div>
+
+                    <div class="contact_field">
+                        <label>Message</label>
+                        <textarea id="contactMessage" rows="5" placeholder="Hi! I'd like to ask about"></textarea>
+                    </div>
+
+                    <button type="submit" class="contact_submit_btn">Submit</button>
+                </form>
+            </div>
+
         </div>
 
     </div>
@@ -113,8 +170,8 @@
             <div class="footer_col">
                 <h4>Links</h4>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Shop</a></li>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./shop.html">Shop</a></li>
                     <li><a href="./blog.html">Blog</a></li>
                     <li><a href="./contact.html">Contact</a></li>
                 </ul>
@@ -146,7 +203,7 @@
         </div>
     </footer>
 
-    <!-- Shopping Cart Drawer (comparison page pe bhi cart icon kaam kare) -->
+    <!-- Shopping Cart Drawer -->
     <div class="cart_overlay" id="cartOverlay"></div>
 
     <div class="cart_drawer" id="cartDrawer">

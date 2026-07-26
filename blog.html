@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Comparison</title>
+    <title>Blog</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
     <script defer src="./cart.js"></script>
     <script defer src="./search.js"></script>
-    <script defer src="./comparison.js"></script>
+    <script defer src="./blog.js"></script>
 </head>
 <body>
     <header>
@@ -40,29 +40,52 @@
         </div>
     </header>
 
-    <!-- Comparison Banner -->
-    <div class="banner comparison_banner">
+    <!-- Blog Banner -->
+    <div class="banner blog_banner">
         <div class="overlay"></div>
         <div class="banner-text">
             <img src="./images/header_logo.png" alt="logo" class="banner_logo_icon">
-            <h1 style="color:black;">Product Comparison</h1>
+            <h1 style="color:black;">Blog</h1>
             <p style="color:black;">
-                <a href="index.html" style="color:black;">Home</a> &gt; <span style="color:black;">Comparison</span>
+                <a href="index.html" style="color:black;">Home</a> &gt; <span style="color:black;">Blog</span>
             </p>
         </div>
     </div>
 
-    <!-- Comparison Section -->
-    <div class="comparison_page">
+    <!-- Blog Page -->
+    <div class="blog_page">
 
-        <div class="comparison_top_row" id="comparisonTopRow">
-            <!-- JS se: "Go to Product page" box + product cards + Add A Product box -->
+        <div class="blog_posts_col" id="blogPostsCol">
+            <!-- JS se render hoga -->
         </div>
 
-        <div class="comparison_table" id="comparisonTable">
-            <!-- JS se: General specs table -->
+        <div class="blog_sidebar">
+
+            <div class="blog_search_box">
+                <input type="text" placeholder="Search">
+                <button><i class="fa fa-search"></i></button>
+            </div>
+
+            <div class="blog_sidebar_section">
+                <h3>Categories</h3>
+                <ul class="blog_category_list" id="blogCategoryList">
+                    <!-- JS se render hoga -->
+                </ul>
+            </div>
+
+            <div class="blog_sidebar_section">
+                <h3>Recent Posts</h3>
+                <div class="blog_recent_list" id="blogRecentList">
+                    <!-- JS se render hoga -->
+                </div>
+            </div>
+
         </div>
 
+    </div>
+
+    <div class="pagination" id="blogPagination">
+        <!-- JS se render hoga -->
     </div>
 
     <!-- Features strip -->
@@ -113,8 +136,8 @@
             <div class="footer_col">
                 <h4>Links</h4>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Shop</a></li>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./shop.html">Shop</a></li>
                     <li><a href="./blog.html">Blog</a></li>
                     <li><a href="./contact.html">Contact</a></li>
                 </ul>
@@ -146,7 +169,7 @@
         </div>
     </footer>
 
-    <!-- Shopping Cart Drawer (comparison page pe bhi cart icon kaam kare) -->
+    <!-- Shopping Cart Drawer -->
     <div class="cart_overlay" id="cartOverlay"></div>
 
     <div class="cart_drawer" id="cartDrawer">

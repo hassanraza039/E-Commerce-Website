@@ -94,6 +94,21 @@ function closeCartDrawer() {
 if (cartCloseBtn) cartCloseBtn.addEventListener("click", closeCartDrawer);
 if (cartOverlay) cartOverlay.addEventListener("click", closeCartDrawer);
 
+// Header ka cart icon -> drawer khole
+const headerCartIcon = document.getElementById("headerCartIcon");
+if (headerCartIcon) {
+    headerCartIcon.style.cursor = "pointer";
+    headerCartIcon.addEventListener("click", openCartDrawer);
+}
+
+// Drawer ke andar "Cart" button -> cart.html (full cart page) pe le jao
+const goToCartBtn = document.getElementById("goToCartBtn");
+if (goToCartBtn) {
+    goToCartBtn.addEventListener("click", () => {
+        window.location.href = "cart.html";
+    });
+}
+
 // "Comparison" button -> comparison.html pe le jao
 const comparisonBtn = document.getElementById("comparisonBtn");
 if (comparisonBtn) {

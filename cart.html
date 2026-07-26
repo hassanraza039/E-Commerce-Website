@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Comparison</title>
+    <title>Cart</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
     <script defer src="./cart.js"></script>
     <script defer src="./search.js"></script>
-    <script defer src="./comparison.js"></script>
+    <script defer src="./cart_page.js"></script>
 </head>
 <body>
     <header>
@@ -40,27 +40,44 @@
         </div>
     </header>
 
-    <!-- Comparison Banner -->
-    <div class="banner comparison_banner">
+    <!-- Cart Banner -->
+    <div class="banner cart_banner">
         <div class="overlay"></div>
         <div class="banner-text">
             <img src="./images/header_logo.png" alt="logo" class="banner_logo_icon">
-            <h1 style="color:black;">Product Comparison</h1>
+            <h1 style="color:black;">Cart</h1>
             <p style="color:black;">
-                <a href="index.html" style="color:black;">Home</a> &gt; <span style="color:black;">Comparison</span>
+                <a href="index.html" style="color:black;">Home</a> &gt; <span style="color:black;">Cart</span>
             </p>
         </div>
     </div>
 
-    <!-- Comparison Section -->
-    <div class="comparison_page">
+    <!-- Cart Page -->
+    <div class="cart_page">
 
-        <div class="comparison_top_row" id="comparisonTopRow">
-            <!-- JS se: "Go to Product page" box + product cards + Add A Product box -->
+        <div class="cart_table_wrapper">
+            <div class="cart_table_header">
+                <span class="ct_head_product">Product</span>
+                <span class="ct_head_price">Price</span>
+                <span class="ct_head_qty">Quantity</span>
+                <span class="ct_head_subtotal">Subtotal</span>
+            </div>
+            <div class="cart_table_rows" id="cartPageRows">
+                <!-- JS se render hoga -->
+            </div>
         </div>
 
-        <div class="comparison_table" id="comparisonTable">
-            <!-- JS se: General specs table -->
+        <div class="cart_totals_box">
+            <h3>Cart Totals</h3>
+            <div class="cart_totals_row">
+                <span>Subtotal</span>
+                <span class="cart_totals_value" id="cartPageSubtotal">Rs. 0</span>
+            </div>
+            <div class="cart_totals_row cart_totals_total">
+                <span>Total</span>
+                <span class="cart_totals_value cart_totals_gold" id="cartPageTotal">Rs. 0</span>
+            </div>
+            <button class="cart_checkout_btn" id="cartCheckoutBtn">Check Out</button>
         </div>
 
     </div>
@@ -146,7 +163,7 @@
         </div>
     </footer>
 
-    <!-- Shopping Cart Drawer (comparison page pe bhi cart icon kaam kare) -->
+    <!-- Shopping Cart Drawer (header cart icon ke liye) -->
     <div class="cart_overlay" id="cartOverlay"></div>
 
     <div class="cart_drawer" id="cartDrawer">

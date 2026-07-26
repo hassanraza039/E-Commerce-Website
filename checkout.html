@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Comparison</title>
+    <title>Checkout</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
     <script defer src="./cart.js"></script>
     <script defer src="./search.js"></script>
-    <script defer src="./comparison.js"></script>
+    <script defer src="./checkout.js"></script>
 </head>
 <body>
     <header>
@@ -40,27 +40,144 @@
         </div>
     </header>
 
-    <!-- Comparison Banner -->
-    <div class="banner comparison_banner">
+    <!-- Checkout Banner -->
+    <div class="banner checkout_banner">
         <div class="overlay"></div>
         <div class="banner-text">
             <img src="./images/header_logo.png" alt="logo" class="banner_logo_icon">
-            <h1 style="color:black;">Product Comparison</h1>
+            <h1 style="color:black;">Checkout</h1>
             <p style="color:black;">
-                <a href="index.html" style="color:black;">Home</a> &gt; <span style="color:black;">Comparison</span>
+                <a href="index.html" style="color:black;">Home</a> &gt; <span style="color:black;">Checkout</span>
             </p>
         </div>
     </div>
 
-    <!-- Comparison Section -->
-    <div class="comparison_page">
+    <!-- Checkout Page -->
+    <div class="checkout_page">
 
-        <div class="comparison_top_row" id="comparisonTopRow">
-            <!-- JS se: "Go to Product page" box + product cards + Add A Product box -->
+        <!-- Billing details form -->
+        <div class="billing_form">
+            <h2>Billing details</h2>
+
+            <div class="billing_row">
+                <div class="billing_field">
+                    <label>First Name</label>
+                    <input type="text" id="billFirstName">
+                </div>
+                <div class="billing_field">
+                    <label>Last Name</label>
+                    <input type="text" id="billLastName">
+                </div>
+            </div>
+
+            <div class="billing_field">
+                <label>Company Name (Optional)</label>
+                <input type="text" id="billCompany">
+            </div>
+
+            <div class="billing_field">
+                <label>Country / Region</label>
+                <select id="billCountry">
+                    <option>Sri Lanka</option>
+                    <option>Pakistan</option>
+                    <option>India</option>
+                    <option>Bangladesh</option>
+                    <option>United States</option>
+                </select>
+            </div>
+
+            <div class="billing_field">
+                <label>Street address</label>
+                <input type="text" id="billStreet">
+            </div>
+
+            <div class="billing_field">
+                <label>Town / City</label>
+                <input type="text" id="billCity">
+            </div>
+
+            <div class="billing_field">
+                <label>Province</label>
+                <select id="billProvince">
+                    <option>Western Province</option>
+                    <option>Central Province</option>
+                    <option>Southern Province</option>
+                    <option>Northern Province</option>
+                </select>
+            </div>
+
+            <div class="billing_field">
+                <label>ZIP code</label>
+                <input type="text" id="billZip">
+            </div>
+
+            <div class="billing_field">
+                <label>Phone</label>
+                <input type="text" id="billPhone">
+            </div>
+
+            <div class="billing_field">
+                <label>Email address</label>
+                <input type="email" id="billEmail">
+            </div>
+
+            <div class="billing_field">
+                <textarea id="billNotes" placeholder="Additional information" rows="4"></textarea>
+            </div>
         </div>
 
-        <div class="comparison_table" id="comparisonTable">
-            <!-- JS se: General specs table -->
+        <!-- Order summary -->
+        <div class="order_summary">
+
+            <div class="order_summary_header">
+                <span>Product</span>
+                <span>Subtotal</span>
+            </div>
+
+            <div class="order_items_list" id="orderItemsList">
+                <!-- JS se render hoga -->
+            </div>
+
+            <div class="order_summary_row">
+                <span>Subtotal</span>
+                <span id="orderSubtotal">Rs. 0</span>
+            </div>
+
+            <div class="order_summary_row order_summary_total">
+                <span>Total</span>
+                <span id="orderTotal">Rs. 0</span>
+            </div>
+
+            <hr class="divider_line">
+
+            <div class="payment_options">
+                <label class="payment_option">
+                    <input type="radio" name="paymentMethod" value="bank" checked>
+                    <span class="payment_label">Direct Bank Transfer</span>
+                </label>
+                <p class="payment_desc" id="bankDesc">
+                    Make your payment directly into our bank account. Please use your Order ID as the payment reference.
+                    Your order will not be shipped until the funds have cleared in our account.
+                </p>
+
+                <label class="payment_option">
+                    <input type="radio" name="paymentMethod" value="direct">
+                    <span class="payment_label">Direct Bank Transfer</span>
+                </label>
+
+                <label class="payment_option">
+                    <input type="radio" name="paymentMethod" value="cod">
+                    <span class="payment_label">Cash On Delivery</span>
+                </label>
+            </div>
+
+            <p class="privacy_note">
+                Your personal data will be used to support your experience throughout this website,
+                to manage access to your account, and for other purposes described in our
+                <a href="#">privacy policy.</a>
+            </p>
+
+            <button class="place_order_btn" id="placeOrderBtn">Place order</button>
         </div>
 
     </div>
@@ -113,8 +230,8 @@
             <div class="footer_col">
                 <h4>Links</h4>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Shop</a></li>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./shop.html">Shop</a></li>
                     <li><a href="./blog.html">Blog</a></li>
                     <li><a href="./contact.html">Contact</a></li>
                 </ul>
@@ -146,7 +263,7 @@
         </div>
     </footer>
 
-    <!-- Shopping Cart Drawer (comparison page pe bhi cart icon kaam kare) -->
+    <!-- Shopping Cart Drawer -->
     <div class="cart_overlay" id="cartOverlay"></div>
 
     <div class="cart_drawer" id="cartDrawer">
