@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Comparison</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+    <script defer src="./cart.js"></script>
+    <script defer src="./comparison.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header_container">
+            <div class="header_div">
+                <div class="header_logo">
+                    <img src="./images/header_logo.png" alt="logo">
+                </div>
+                <h3 class="header_text">FURNIRO</h3>
+            </div>
+            <div class="header_ul">
+                <ul class="header_ul">
+                    <li class="header_li"><a href="./index.html">Home</a></li>
+                    <li class="header_li"><a href="./shop.html">Shop</a></li>
+                    <li class="header_li">About</li>
+                    <li class="header_li">Contact</li>
+                </ul>
+            </div>
+            <div class="header_icon">
+                <span><img src="./images/header_contact.png" alt="contact" class="icons"></span>
+                <span><img src="./images/header_heart.png" alt="heart" class="icons"></span>
+                <span><img src="./images/header_search.png" alt="search" class="icons"></span>
+                <span><img src="./images/header_cart.png" alt="cart" class="icons"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Comparison Banner -->
+    <div class="banner comparison_banner">
+        <div class="overlay"></div>
+        <div class="banner-text">
+            <img src="./images/header_logo.png" alt="logo" class="banner_logo_icon">
+            <h1 style="color:black;">Product Comparison</h1>
+            <p style="color:black;">
+                <a href="index.html" style="color:black;">Home</a> &gt; <span style="color:black;">Comparison</span>
+            </p>
+        </div>
+    </div>
+
+    <!-- Comparison Section -->
+    <div class="comparison_page">
+
+        <div class="comparison_top_row" id="comparisonTopRow">
+            <!-- JS se: "Go to Product page" box + product cards + Add A Product box -->
+        </div>
+
+        <div class="comparison_table" id="comparisonTable">
+            <!-- JS se: General specs table -->
+        </div>
+
+    </div>
+
+    <!-- Features strip -->
+    <div class="features">
+
+        <div class="feature-item">
+            <img src="./images/trophy 1.png" alt="High Quality" class="feature-icon">
+            <div class="feature-text">
+                <h4>High Quality</h4>
+                <p>crafted from top materials</p>
+            </div>
+        </div>
+
+        <div class="feature-item">
+            <img src="./images/guarantee.png" alt="Warranty Protection" class="feature-icon">
+            <div class="feature-text">
+                <h4>Warranty Protection</h4>
+                <p>Over 2 years</p>
+            </div>
+        </div>
+
+        <div class="feature-item">
+            <img src="./images/shipping.png" alt="Free Shipping" class="feature-icon">
+            <div class="feature-text">
+                <h4>Free Shipping</h4>
+                <p>Order over 150 $</p>
+            </div>
+        </div>
+
+        <div class="feature-item">
+            <img src="./images/customer-support.png" alt="24/7 Support" class="feature-icon">
+            <div class="feature-text">
+                <h4>24 / 7 Support</h4>
+                <p>Dedicated support</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="site_footer">
+        <div class="footer_container">
+
+            <div class="footer_col footer_brand">
+                <h2>Funiro.</h2>
+                <p>400 University Drive Suite 200 Coral Gables,<br>FL 33134 USA</p>
+            </div>
+
+            <div class="footer_col">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_col">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">Payment Options</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Privacy Policies</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_col footer_newsletter">
+                <h4>Newsletter</h4>
+                <div class="newsletter_input">
+                    <input type="email" placeholder="Enter Your Email Address">
+                    <button type="submit">SUBSCRIBE</button>
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="footer_divider">
+
+        <div class="footer_bottom">
+            <p>2023 furino. All rights reverved</p>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Drawer (comparison page pe bhi cart icon kaam kare) -->
+    <div class="cart_overlay" id="cartOverlay"></div>
+
+    <div class="cart_drawer" id="cartDrawer">
+        <div class="cart_drawer_header">
+            <h2>Shopping Cart</h2>
+            <span class="cart_close_btn" id="cartCloseBtn">&#10005;</span>
+        </div>
+
+        <hr class="cart_drawer_divider">
+
+        <div class="cart_items_list" id="cartItemsList"></div>
+
+        <div class="cart_subtotal_row">
+            <span>Subtotal</span>
+            <span class="cart_subtotal_value" id="cartSubtotal">Rs. 0</span>
+        </div>
+
+        <div class="cart_action_buttons">
+            <button class="cart_action_btn">Cart</button>
+            <button class="cart_action_btn">Checkout</button>
+            <button class="cart_action_btn" id="comparisonBtn">Comparison</button>
+        </div>
+    </div>
+
+</body>
+</html>

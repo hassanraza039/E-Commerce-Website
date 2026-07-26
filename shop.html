@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
     <link rel="stylesheet" href="./style.css">
+    <script defer src="./cart.js"></script>
     <script defer src="./app.js"></script>
 </head>
 <body>
@@ -162,5 +163,31 @@
         <p>2023 furino. All rights reverved</p>
     </div>
 </footer>
+
+<!-- Shopping Cart Drawer -->
+<div class="cart_overlay" id="cartOverlay"></div>
+
+<div class="cart_drawer" id="cartDrawer">
+    <div class="cart_drawer_header">
+        <h2>Shopping Cart</h2>
+        <span class="cart_close_btn" id="cartCloseBtn">&#10005;</span>
+    </div>
+
+    <hr class="cart_drawer_divider">
+
+    <div class="cart_items_list" id="cartItemsList"></div>
+
+    <div class="cart_subtotal_row">
+        <span>Subtotal</span>
+        <span class="cart_subtotal_value" id="cartSubtotal">Rs. 0</span>
+    </div>
+
+    <div class="cart_action_buttons">
+        <button class="cart_action_btn">Cart</button>
+        <button class="cart_action_btn">Checkout</button>
+        <button class="cart_action_btn" id="comparisonBtn">Comparison</button>
+    </div>
+</div>
+
 </body>
 </html>

@@ -54,9 +54,9 @@ const products = [
 // Sirf tab chalega jab page pe id="products" wala element maujood ho
 const productContainer = document.getElementById("products");
 if (productContainer) {
-    products.forEach((product) => {
+    products.forEach((product, index) => {
         productContainer.innerHTML += `
-        <div class="card">
+        <div class="card" data-index="${index}">
             <div class="product_items">
 
                 <div class="img_wrapper">
@@ -85,6 +85,9 @@ if (productContainer) {
         </div>
         `;
     });
+
+    attachCardClickEvents(productContainer, products);
+    attachAddToCartButtons(productContainer, products);
 }
 
 // ================= ROOM SLIDER (for index.html) =================
@@ -149,9 +152,9 @@ const shop = [
 // Sirf tab chalega jab page pe id="shop" wala element maujood ho
 const shopContainer = document.getElementById("shop");
 if (shopContainer) {
-    shop.forEach((product) => {
+    shop.forEach((product, index) => {
         shopContainer.innerHTML += `
-        <div class="card">
+        <div class="card" data-index="${index}">
             <div class="product_items">
 
                 <div class="img_wrapper">
@@ -178,5 +181,44 @@ if (shopContainer) {
             </div>
         </div>
         `;
+    });
+
+    attachCardClickEvents(shopContainer, shop);
+    attachAddToCartButtons(shopContainer, shop);
+}
+
+// ================= SHARED: "Add to cart" overlay button click =================
+function attachAddToCartButtons(container, dataArray) {
+    const cards = container.querySelectorAll(".card");
+    cards.forEach((card) => {
+        const btn = card.querySelector(".cart_btn");
+        if (!btn) return;
+
+        btn.addEventListener("click", (e) => {
+            e.stopPropagation(); // taake card ka apna click (product page pe le jana) na chale
+            const index = card.getAttribute("data-index");
+            const product = dataArray[index];
+            addToCart(product, 1);
+            openCartDrawer();
+        });
+    });
+}
+
+// ================= SHARED: card click -> go to product.html =================
+function attachCardClickEvents(container, dataArray) {
+    const cards = container.querySelectorAll(".card");
+    cards.forEach((card) => {
+        card.addEventListener("click", (e) => {
+            // agar user ne "Add to cart" ya icons pe click kiya hai to product page pe mat jao
+            if (e.target.closest(".cart_btn") || e.target.closest(".icons_row")) {
+                return;
+            }
+            const index = card.getAttribute("data-index");
+            const selectedProduct = dataArray[index];
+
+            localStorage.setItem("selectedProduct", JSON.stringify(selectedProduct));
+            window.location.href = "product.html";
+        });
+        card.style.cursor = "pointer";
     });
 }
